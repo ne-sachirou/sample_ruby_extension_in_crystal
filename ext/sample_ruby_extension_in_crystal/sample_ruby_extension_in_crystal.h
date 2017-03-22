@@ -1,0 +1,10 @@
+#ifndef SAMPLE_RUBY_EXTENSION_IN_CRYSTAL_H
+#define SAMPLE_RUBY_EXTENSION_IN_CRYSTAL_H 1
+
+#include "ruby.h"
+#include "stdio.h"
+
+VALUE hello_c(VALUE);
+VALUE fib_c(VALUE,VALUE);
+
+#endif /* SAMPLE_RUBY_EXTENSION_IN_CRYSTAL_H */

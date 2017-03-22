@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'sample_ruby_extension_in_crystal'
+require 'benchmark'
+
+SampleRubyExtensionInCrystal.hello_rb
+SampleRubyExtensionInCrystal.hello_c
+
+Benchmark.bm(2) do |bm|
+  n = 1_000_000
+  bm.report('rb') { n.times { SampleRubyExtensionInCrystal.fib_rb 30 } }
+  bm.report('c') { n.times { SampleRubyExtensionInCrystal.fib_c 30 } }
+end
