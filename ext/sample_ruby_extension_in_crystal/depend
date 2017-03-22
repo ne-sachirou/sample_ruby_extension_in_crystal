@@ -1,0 +1,4 @@
+$(TARGET).o: ;
+
+$(TARGET_SO):
+	crystal build --verbose --release -o $@ --link-flags "$(shell pwd)/libruby.crystal.o $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)" $(srcdir)/$(TARGET).cr

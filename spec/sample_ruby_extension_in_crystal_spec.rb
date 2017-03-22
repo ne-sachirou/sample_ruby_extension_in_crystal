@@ -16,14 +16,14 @@ RSpec.describe SampleRubyExtensionInCrystal do
     end
   end
 
-  describe '.fib_c' do
+  describe '.fib_cr' do
     [
       [0, 1],
       [1, 1],
       [2, 2],
       [30, 1_346_269]
     ].each do |n, r|
-      it("fib #{n} is #{r}") { expect(described_class.fib_c(n)).to eq r }
+      it("fib #{n} is #{r}") { expect(SampleRubyExtensionInCrystal.fib_cr(n)).to eq r }
     end
   end
 end
